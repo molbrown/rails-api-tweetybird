@@ -28,10 +28,3 @@ Your API will also need to implement token authentication. You can use Rails' bu
   - Only the user that created a post should be able to delete it.
 - Posts should not be valid if they are less than 2 characters or greater than 280 characters. Although a client-side application would likely show validations in the UI to prevent invalid submissions, this validation should exist on the model to ensure that only valid data is persisted to the database.
 
-### Extra challenges
-
-- Add the ability to re-post another user's posts.
-- Add the ability to "follow" other users on the site. You should be able to query for the posts of the other users you are following. See the [`acts_as_follower` gem](https://github.com/tcocca/acts_as_follower).
-- Add the ability to "unfollow" users you have followed.
-- Create a new type of user: an admin user. This admin user should be allowed to edit anybody's posts or user accounts.
-  - No one should be able to create an admin user through the API (it'll have to be created from the rails console), but you should be able to authenticate an admin user.
